@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 @Entity
-public class CasesPerState {
+public class StateCasesPerDate {
 
     @Id
     @GeneratedValue(generator = "generator")
@@ -26,10 +26,10 @@ public class CasesPerState {
     private Integer numberOfCases;
 
 
-    public CasesPerState() {
+    public StateCasesPerDate() {
     }
 
-    public CasesPerState(State state, LocalDate date, Integer numberOfCases) {
+    public StateCasesPerDate(State state, LocalDate date, Integer numberOfCases) {
         this.state = state;
         this.date = date;
         this.numberOfCases = numberOfCases;

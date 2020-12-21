@@ -25,7 +25,7 @@ public class Country {
     private Set<State> states;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "country")
-    private Set<CasesPerCountry> casesPerCountry;
+    private Set<CountryCasesPerDate> countryCasesPerDate;
 
 
     public Country() {
@@ -69,12 +69,12 @@ public class Country {
         this.states = states;
     }
 
-    public Set<CasesPerCountry> getCasesPerCountry() {
-        return casesPerCountry;
+    public Set<CountryCasesPerDate> getCasesPerCountry() {
+        return countryCasesPerDate;
     }
 
-    public void setCasesPerCountry(Set<CasesPerCountry> casesPerCountry) {
-        this.casesPerCountry = casesPerCountry;
+    public void setCasesPerCountry(Set<CountryCasesPerDate> countryCasesPerDate) {
+        this.countryCasesPerDate = countryCasesPerDate;
     }
 
     @Override

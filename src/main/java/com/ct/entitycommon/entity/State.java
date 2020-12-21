@@ -2,7 +2,6 @@ package com.ct.entitycommon.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -28,7 +27,7 @@ public class State {
     private Country country;
 
     @OneToMany(fetch = FetchType.EAGER, mappedBy = "state")
-    private Set<CasesPerState> casesPerState;
+    private Set<StateCasesPerDate> stateCasesPerDate;
 
 
     public State() {
@@ -81,11 +80,11 @@ public class State {
         this.country = country;
     }
 
-    public Set<CasesPerState> getCasesPerState() {
-        return casesPerState;
+    public Set<StateCasesPerDate> getCasesPerState() {
+        return stateCasesPerDate;
     }
 
-    public void setCasesPerState(Set<CasesPerState> casesPerState) {
-        this.casesPerState = casesPerState;
+    public void setCasesPerState(Set<StateCasesPerDate> stateCasesPerDate) {
+        this.stateCasesPerDate = stateCasesPerDate;
     }
 }
