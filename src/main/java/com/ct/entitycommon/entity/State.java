@@ -80,11 +80,11 @@ public class State {
         this.country = country;
     }
 
-    public Set<StateCasesPerDate> getCasesPerState() {
+    public Set<StateCasesPerDate> getStateCasesPerDate() {
         return stateCasesPerDate;
     }
 
-    public void setCasesPerState(Set<StateCasesPerDate> stateCasesPerDate) {
+    public void setStateCasesPerDate(Set<StateCasesPerDate> stateCasesPerDate) {
         this.stateCasesPerDate = stateCasesPerDate;
     }
 }
