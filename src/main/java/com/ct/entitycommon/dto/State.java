@@ -10,5 +10,5 @@ public class State {
     private String stateName;
     private Double latitude;
     private Double longitude;
-    private List<StateCasesPerDate> stateCasesPerDates;
+    private List<StateCasesPerDate> stateCasesPerDate;
 }

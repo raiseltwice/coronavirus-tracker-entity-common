@@ -11,5 +11,5 @@ public class Country {
     private Double latitude;
     private Double longitude;
     private List<State> states;
-    private List<CountryCasesPerDate> countryCasesPerDates;
+    private List<CountryCasesPerDate> countryCasesPerDate;
 }
