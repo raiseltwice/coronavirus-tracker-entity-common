@@ -1,6 +1,8 @@
 package com.ct.entitycommon.entity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -10,10 +12,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
 public class State {
 
     @Id

@@ -1,6 +1,8 @@
 package com.ct.entitycommon.entity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -11,7 +13,9 @@ import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 @Entity
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
 public class StateCasesPerDate {
 
     @Id

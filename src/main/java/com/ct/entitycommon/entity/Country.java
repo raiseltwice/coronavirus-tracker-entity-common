@@ -1,6 +1,8 @@
 package com.ct.entitycommon.entity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -12,7 +14,9 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Data
+@NoArgsConstructor
+@Getter
+@Setter
 public class Country {
 
     @Id
