@@ -1,5 +1,6 @@
 package com.ct.entitycommon.entity;
 
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 @Entity
+@Data
 public class StateCasesPerDate {
 
     @Id
@@ -24,46 +26,4 @@ public class StateCasesPerDate {
     private LocalDate date;
 
     private Integer numberOfCases;
-
-
-    public StateCasesPerDate() {
-    }
-
-    public StateCasesPerDate(State state, LocalDate date, Integer numberOfCases) {
-        this.state = state;
-        this.date = date;
-        this.numberOfCases = numberOfCases;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public State getState() {
-        return state;
-    }
-
-    public void setState(State state) {
-        this.state = state;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public Integer getNumberOfCases() {
-        return numberOfCases;
-    }
-
-    public void setNumberOfCases(Integer numberOfCases) {
-        this.numberOfCases = numberOfCases;
-    }
 }
