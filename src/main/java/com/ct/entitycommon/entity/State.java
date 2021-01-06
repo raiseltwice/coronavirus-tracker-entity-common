@@ -6,13 +6,11 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -33,6 +31,13 @@ public class State {
     @JoinColumn(name = "country_id")
     private Country country;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "state")
+    @OneToMany(mappedBy = "state")
     private Set<StateCasesPerDate> stateCasesPerDate;
+
+    public State(String stateName, Double latitude, Double longitude, Country country) {
+        this.stateName = stateName;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.country = country;
+    }
 }

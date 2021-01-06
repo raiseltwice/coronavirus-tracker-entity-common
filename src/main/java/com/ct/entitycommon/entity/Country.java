@@ -6,12 +6,8 @@ import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.Objects;
-import java.util.Set;
 
 @Entity
 @NoArgsConstructor
@@ -27,9 +23,9 @@ public class Country {
     private Double latitude;
     private Double longitude;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "country")
-    private Set<State> states;
-
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "country")
-    private Set<CountryCasesPerDate> countryCasesPerDate;
+    public Country(String countryName, Double latitude, Double longitude) {
+        this.countryName = countryName;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
 }

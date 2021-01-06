@@ -26,8 +26,12 @@ public class StateCasesPerDate {
     @ManyToOne
     @JoinColumn(name = "state_id")
     private State state;
-
     private LocalDate date;
-
     private Integer numberOfCases;
+
+    public StateCasesPerDate(State state, LocalDate date, Integer numberOfCases) {
+        this.state = state;
+        this.date = date;
+        this.numberOfCases = numberOfCases;
+    }
 }

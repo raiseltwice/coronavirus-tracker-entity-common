@@ -28,4 +28,10 @@ public class CountryCasesPerDate {
     private Country country;
     private LocalDate date;
     private Integer numberOfCases;
+
+    public CountryCasesPerDate(Country country, LocalDate date, Integer numberOfCases) {
+        this.country = country;
+        this.date = date;
+        this.numberOfCases = numberOfCases;
+    }
 }
