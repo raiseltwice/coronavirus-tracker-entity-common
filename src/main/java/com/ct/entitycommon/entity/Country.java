@@ -1,5 +1,6 @@
 package com.ct.entitycommon.entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -8,12 +9,12 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Objects;
 
 @Entity
 @NoArgsConstructor
 @Getter
 @Setter
+@EqualsAndHashCode
 public class Country {
 
     @Id
@@ -28,18 +29,5 @@ public class Country {
         this.countryName = countryName;
         this.latitude = latitude;
         this.longitude = longitude;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Country country = (Country) o;
-        return countryName.equals(country.countryName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(countryName);
     }
 }
