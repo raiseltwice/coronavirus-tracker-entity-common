@@ -1,4 +1,4 @@
-package com.ct.entitycommon.entity;
+package coronavirus.tracker.entitycommon.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Getter
 @Setter
-public class StateCasesPerDate {
+public class CountryCasesPerDate {
 
     @Id
     @GeneratedValue(generator = "generator")
@@ -24,13 +24,13 @@ public class StateCasesPerDate {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "state_id")
-    private State state;
+    @JoinColumn(name = "country_id")
+    private Country country;
     private LocalDate date;
     private Integer numberOfCases;
 
-    public StateCasesPerDate(State state, LocalDate date, Integer numberOfCases) {
-        this.state = state;
+    public CountryCasesPerDate(Country country, LocalDate date, Integer numberOfCases) {
+        this.country = country;
         this.date = date;
         this.numberOfCases = numberOfCases;
     }

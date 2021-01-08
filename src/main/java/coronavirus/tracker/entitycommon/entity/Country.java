@@ -1,4 +1,4 @@
-package com.ct.entitycommon.entity;
+package coronavirus.tracker.entitycommon.entity;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
