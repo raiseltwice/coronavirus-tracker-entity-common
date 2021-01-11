@@ -1,5 +1,6 @@
 package coronavirus.tracker.entitycommon.entity;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @EqualsAndHashCode
+@Builder
 public class Country {
 
     @Id
@@ -24,10 +26,4 @@ public class Country {
     private String countryName;
     private Double latitude;
     private Double longitude;
-
-    public Country(String countryName, Double latitude, Double longitude) {
-        this.countryName = countryName;
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
 }
